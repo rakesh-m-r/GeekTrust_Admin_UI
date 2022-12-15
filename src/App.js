@@ -28,7 +28,7 @@ export default function App() {
 
   //Fetching the list of items from API initially
   useEffect(() => {
-    setLoading(!loading);
+    setLoading(true);
     axios
       .get(API_ENDPOINT)
       .then((response) => {
@@ -40,7 +40,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    setLoading(!loading);
+    setLoading(false);
   }, [users, error]);
 
   useEffect(() => {
